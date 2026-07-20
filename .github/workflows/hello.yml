@@ -1,0 +1,21 @@
+#This is workflow name
+
+name: Hello Sujal
+
+# runs on a trigger 
+on: 
+  push:
+    branches: [main]
+
+
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say Hello to user
+      - run: echo "Hello User"
+      
+      - name: say Hello to $USER
+      - run: echo "Hello $USER"
+      
