@@ -1,0 +1,34 @@
+# This is name of the workflow that will be displayed ion Actions tab
+
+name: Sujal
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code:
+      runs-on: ubuntu-latest
+      steps:
+        - name: checkout code
+          run: echo "Clone from github"
+     
+      
+  build:
+      runs-on: ubuntu-latest
+      steps: 
+        - name : build a code
+          run: echo "Build your code here"
+  
+  test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Testing
+          run:  echo "Test you code here"
+      
+  deploy:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: Deployment
+          run: echo "Deploy your code here"
+  
+  
