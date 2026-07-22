@@ -39,6 +39,7 @@ jobs:
           run:  echo "Test you code here"
       
   deploy:
+      if: inputs.enviromnet=='dev'
       needs: [code,build,test,]
       runs-on: ubuntu-latest
       steps: 
