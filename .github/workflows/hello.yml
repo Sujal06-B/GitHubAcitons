@@ -5,7 +5,9 @@ name: Hello Sujal
 on:
   push:
     branches: [main]
-
+    paths:
+    - '**.html'
+    - '**.yml'
 jobs:
   greet:
     runs-on: ubuntu-latest
