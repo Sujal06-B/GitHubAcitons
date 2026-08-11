@@ -3,7 +3,7 @@ name: Matrix Strategy
 on : 
     push: 
       branches: [main]
-jobs : 
+jobs: 
    validate:
         runs-on: ubuntu-latest
         strategy:
@@ -11,14 +11,14 @@ jobs :
             matrix:
                 python-version: ["3.10","3.11","3.12"]
    steps:
-      name: Checkout Code
-      uses: actions/checkout@v4
+      -name: Checkout Code
+       uses: actions/checkout@v4
 
-      name: setup python ${{matrix.python-version}}
-      uses: actions/setup-python@v5
+      -name: setup python ${{matrix.python-version}}
+       uses: actions/setup-python@v5
 
-      name: install dependencies 
-      run: pip install -r requirements.txt
+      -name: install dependencies 
+       run: pip install -r requirements.txt
 
-      name: run linter
-      run: flake8 app.py
+      -name: run linter
+       run: flake8 app.py
